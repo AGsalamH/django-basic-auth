@@ -1,0 +1,10 @@
+{% for todo in todos %}
+    <div>
+        <h2> {{ todo.title }} </h2>
+        {% if todo.description %}
+          <p> {{todo.description}} </p>
+        {% endif %}
+        <p>Created at: {{ todo.date_created }} </p>
+        <p> Status: {% if todo.done %} Done {% else %} In-progress... {% endif %} </p>
+    </div> <hr>
+{% endfor %}
