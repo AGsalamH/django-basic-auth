@@ -6,5 +6,7 @@
         {% endif %}
         <p>Created at: {{ todo.date_created }} </p>
         <p> Status: {% if todo.done %} Done {% else %} In-progress... {% endif %} </p>
+        <a href="{{ todo.get_delete_url }}"> Delete </a>
+        <a href="{{ todo.get_update_url }}"> Update </a>
     </div> <hr>
 {% endfor %}

@@ -24,3 +24,8 @@ class Todo(models.Model):
     def get_absolute_url(self):
         return reverse("todo-detail", kwargs={"pk": self.pk})
     
+    def get_delete_url(self):
+        return reverse("todo-delete", kwargs={"pk": self.pk})
+    
+    def get_update_url(self):
+        return reverse("todo-update", kwargs={"pk": self.pk})
